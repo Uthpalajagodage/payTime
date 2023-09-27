@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="fname"],
+        input[type="bname"],
+        input[type="pnumber"],
+        input[type="address"],
+        input[type="district"],
+        input[type="country"],
+        input[type="uname"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="signin-form" class="signin-form">
+            <h2>New here?</h2>
+
+            <div class="form-group">
+                <label for="full name">Full name:</label>
+                <input type="fname" id="fname" name="fname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="business name">Business name:</label>
+                <input type="bname" id="bname" name="bname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone number">Phone number:</label>
+                <input type="pnumber" id="pnumber" name="pnumber" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Address">Address:</label>
+                <input type="address" id="address" name="address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="district">District:</label>
+                <input type="district" id="district" name="district" required>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input type="country" id="country" name="country" required>
+            </div>
+
+            <div class="form-group">
+                <label for="user name">User name:</label>
+                <input type="uname" id="uname" name="uname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("signin-form");
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const password = form.querySelector("#password").value;
+                const confirmPassword = form.querySelector("#confirm-password").value;
+                const fullName = form.querySelector("#fname").value;
+
+
+                 // Check if the password and confirm password fields match
+                if (password !== confirmPassword) {
+                    alert("Passwords do not match. Please try again.");
+                    return; // Prevent form submission
+                }
+
+                // Check if the full name has a minimum of 6 characters
+                if (fullName.length < 6) {
+                    alert("Full name must be at least 6 characters long.");
+                    return; // Prevent form submission
+                }
+
+                // Continue with form submission or other actions.
+                // You can send the data to your server for user registration.
+            });
+        });
+
+    </script>
+</body>
+</html>
