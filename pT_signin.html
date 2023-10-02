@@ -18,8 +18,9 @@
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.7);
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
         }
 
         form {
@@ -166,7 +167,7 @@
                 <input type="password" id="confirm-password" name="confirm-password" required>
             </div>
 
-            <a href="verifyPnum.html" class="button" type="submit">Sign In</a>
+            <button type="submit" class="button">Sign In</button>
         </form>
     </div>
     <script>
@@ -200,8 +201,8 @@
                     return; // Prevent form submission
                 }
 
-                // Continue with form submission or other actions.
-                // You can send the data to your server for user registration.
+                // If validation passes, you can navigate to the "verifyPnum.html" page.
+                window.location.href = "verifyPnum.html";
             });
         });
 
