@@ -16,7 +16,7 @@
             max-width: 400px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.7);
             border: 1px solid #ccc;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -67,10 +67,10 @@
             width: 100%;
         }
 
-        button {
+        .button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #007BFF;
+            background-color: #009444;
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -78,8 +78,8 @@
             flex: 2;
         }
 
-        button:hover {
-            background-color: #0056b3;
+        .button:hover {
+            background-color: #009444;
         }
     </style>
 </head>
@@ -166,7 +166,7 @@
                 <input type="password" id="confirm-password" name="confirm-password" required>
             </div>
 
-            <button type="submit">Sign In</button>
+            <a href="verifyPnum.html" class="button" type="submit">Sign In</a>
         </form>
     </div>
     <script>
