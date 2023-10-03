@@ -89,7 +89,27 @@
             <button type="button" id="resend-code">Resend code</button>
 
             <button type="submit">Verify</button>
+            
         </form>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the form element by its ID
+            var verificationForm = document.getElementById("verification-form");
+
+            // Add an event listener for the form submission
+            verificationForm.addEventListener("submit", function (event) {
+                // Prevent the default form submission behavior
+                event.preventDefault();
+
+                // Perform any necessary verification here (e.g., check the verification code)
+
+                // If verification is successful, redirect to the specified page
+                window.location.href = "verify_yes.html"; // Replace with your desired URL
+            });
+        });
+    </script>
+    
 </body>
 </html>
