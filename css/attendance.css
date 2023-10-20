@@ -83,3 +83,12 @@ li {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 100%; /* Full width for mobile screens */
+    }
+    .form-group {
+        margin-bottom: 10px; /* Adjust spacing for mobile */
+    }
+}
