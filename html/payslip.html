@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Information</title>
+    <link rel="stylesheet" href="../css/payslip.css">
+
+</head>
+<body>
+    <div class="container">
+        <form id="employeeinfo-form" class="employeeinfo-form">
+            <h2>Employee Information</h2>
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="name" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="initials">Initials:</label>
+                <input type="initials" id="initials" name="initials" required>
+            </div>
+
+            <div class="form-group">
+                <label for="iname">Name of initials:</label>
+                <input type="iname" id="iname" name="iname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pnumber">Phone number:</label>
+                <input type="pnumber" id="pnumber" name="pnumber" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="address" id="address" name="address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="district">District:</label>
+                <input type="district" id="district" name="district" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bday">Birthday:</label>
+                <input type="bday" id="bday" name="bday" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="salutaion">Salutation:</label>
+                <select id="salutaion" name="salutaion" required>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Ms">Ms</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nic">NIC number:</label>
+                <input type="nic" id="nic" name="nic" required>
+            </div>
+
+            <div class="form-group">
+                <label for="basic">Basic earing:</label>
+                <input type="basic" id="basic" name="basic" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rate">Rates per day:</label>
+                <input type="rate" id="rate" name="rate" required>
+            </div>
+
+            <button type="submit" class="button">Save</button>
+
+            <button type="submit" class="button">Cancel</button>
+
+        </form>
+    </div>
+
+    <script src="../js/payslip.js"></script>
+
+</body>
+</html>
