@@ -18,57 +18,36 @@ form {
     text-align: center;
 }
 
-h2 {
-    margin-bottom: 20px;
+header {
+    font-size: 50px;
+    padding: 10px 0 30px 0;
+    text-align: center;
     color: #009444;
 }
 
 .form-group {
-    margin-bottom: 20px;
+
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 10x;
+    justify-content: center;
+    width: 512px;
+    height: 420px;
+    overflow: hidden;
+    z-index: 2;
 }
 
-.input-group {
-    display: flex;
-    align-items: center;
-}
-
-.input-group label {
-    flex: 1;
-    margin-right: 10px; /* Adjust the spacing between the labels and inputs */
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-right: 10px;
-    text-align: right;
-}
-
-input[type="text"],
-input[type="fname"],
-input[type="bname"],
-input[type="pnumber"],
-input[type="address"],
-input[type="district"],
-input[type="country"],
-input[type="uname"],
-input[type="password"],
-input[type="email"] {
-    flex: 2;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-select {
-    flex: 2;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.input-field {
+    font-size: 15px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    height: 50px;
     width: 100%;
+    padding: 0 10px 0 45px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
 }
 
 .button {
