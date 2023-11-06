@@ -1,5 +1,18 @@
 <?php
-    // Get data from the form
+$servername = "localhost"; // Replace with your server name
+$username = "root";
+$password = "uthpala";
+$dbname = "signin_paytime";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fullName = $_POST['fname'];
     $businessName = $_POST['bname'];
     $email = $_POST['email'];
@@ -7,24 +20,19 @@
     $address = $_POST['address'];
     $district = $_POST['district'];
     $country = $_POST['country'];
-    $userName = $_POST['uname'];
+    $username = $_POST['uname'];
     $password = $_POST['password'];
+    $registrationDate = date("Y-m-d");
 
-    // Create a database connection
-    $conn = new mysqli('localhost', 'root', '', 'signin_paytime');
+    $sql = "INSERT INTO sign_in (fName, bName, mail, pNum, add, dis, coun, uName, pass, reg) 
+            VALUES ('$fullName', '$businessName', '$email', '$phoneNumber', '$address', '$district', '$country', '$username', '$password', '$registrationDate')";
 
-    // Check for a successful connection
-    if ($conn->connect_error) {
-        die('Connection failed: '.$conn->connect_error);
-    }else{
-        $stmt =$conn->prepare("insert into registration(fName,bName,mail,pNum,add,dis,coun,uName,pass )
-            values(?,?,?,?,?,?,?,?,?)");
-        $stmt->bind_param("sssssssss",$fullName, $businessName, $email, $phoneNumber, $address, $district, $country, $userName, $password);
-        $stmt->execute();
-        echo "registration successfully...";
-        $stmt->close();
-        $conn->close();
-
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
-  
+}
+
+$conn->close();
 ?>
